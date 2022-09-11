@@ -1,0 +1,110 @@
+.container {
+    word-break: break-word;
+    
+    .title {
+        font-family: var(--title);
+        color: var(--titleColor);
+        font-size: 30px;
+
+        display: flex;
+        justify-content: center;
+
+        margin-bottom: 4rem;
+        margin-top: 1rem;
+    }
+
+    .background {
+        background-color: #141920;
+
+        position: absolute;
+        left: 0px;
+        width: 100%;
+        min-height: 510px;
+
+        z-index: -1;
+        pointer-events: none;
+    }
+
+    .about {
+        display: flex;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        align-items: center;
+        margin-top: 200px;
+
+        img {
+            width: 250px;
+            border-radius: 50%;
+            margin-right: 10%;
+        }
+        p {
+            font-family: var(--text);
+        }
+        a{
+            color: var(--primaryColor);
+            font-weight: 600;
+            text-decoration: none;
+        }
+    }
+
+    h4 {
+        font-family: "Times New Roman";
+        float: right;
+        max-width: 300px;
+        font-weight: 200;
+
+        padding: 20px 20px 0px;
+        
+        border-radius: 10px;
+        min-width: 200px;
+        flex: 1 1 0%;
+        box-shadow: rgb(0 0 0 / 5%) 0px 5px 10px;
+
+        p {
+            float: right;
+        }
+    }
+}
+
+.dark {
+    p,
+    h4 {
+        color: var(--dark-textColor);
+    }
+    h4{
+        background-color: var(--dark-secundary-backgroundColor);
+    }
+}
+
+.light {
+    p,
+    h4 {
+        color: var(--light-textColor);
+    }
+
+    h4{
+        background-color: var(--light-secundary-backgroundColor);
+    }
+
+    .background {
+        background-color: var(--light-backgroundColor);
+    }
+}
+
+// responsive
+
+@media (max-width: 980px) {
+    .container {
+        position: relative;
+        .about {
+            margin-top: 100px;
+            flex-direction: column;
+        }
+        .background {
+            width: unset;
+            height: 100%;
+            inset: 100px -16px 0px;
+        }
+    }
+}

@@ -13,7 +13,7 @@ export function ThemeProvider({ children }) {
     function toggleTheme(){
         setTheme(theme == 'dark' ? 'light' : 'dark')
         if(theme=='light'){
-            document.body.style.backgroundColor = '#191919';
+            document.body.style.backgroundColor = '#111';
         }
         else{
             document.body.style.backgroundColor = '#f4f8fd';
