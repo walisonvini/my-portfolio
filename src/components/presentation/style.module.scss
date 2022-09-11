@@ -18,7 +18,6 @@
             margin-right: 2rem;
             cursor: pointer;
             text-decoration: none;
-            color: var(--textColor);
         }
         a:hover {
             color: #766bbf;
@@ -26,12 +25,13 @@
     }
 
     img {
+        max-width: 100%;
         width: 500px;
 
         pointer-events: none;
         user-select: none;
 
-        box-shadow: var(--secundaryBG) 0px 5px 0px;
+        box-shadow: var(--dark-secundary-backgroundColor) 0px 5px 0px;
     }
 }
 
@@ -45,7 +45,7 @@
     font: 600 22px var(--text);
     box-shadow: 0 6px 0 #5c50a8;
     //5e52a8
-    transition: .3s;
+    transition: 0.3s;
 
     display: flex;
 
@@ -58,4 +58,71 @@
 .button:active {
     transform: translateY(5px);
     box-shadow: 0 3px 0 var(--primaryColor);
+}
+
+.dark {
+    a,
+    p {
+        color: var(--dark-textColor);
+    }
+}
+
+.light {
+    a,
+    p {
+        color: var(--light-textColor);
+    }
+}
+
+//respoive
+@media (max-width: 1060px) {
+    .container {
+        img {
+            width: 400px;
+        }
+    }
+}
+
+@media (max-width: 930px) {
+    .container {
+        position: relative;
+        display: block;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-wrap: wrap;
+        margin-top: 10rem;
+
+        .textPresentation {
+            a{
+                margin-right: 0.8rem;
+            }
+        }
+
+        .button {
+            margin: auto;
+            display: block;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .container {
+        margin-top: 2rem;
+    }  
+}
+
+@media (max-width: 350px) {
+    .container {
+        .textPresentation {
+            p {
+                font-size: 1rem;
+            }
+            a {
+                font-size: 1.5rem;
+            }
+        }
+    }  
 }

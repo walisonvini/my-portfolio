@@ -7,9 +7,12 @@ import { AiFillGithub } from 'react-icons/ai';
 import { AiFillLinkedin } from 'react-icons/ai';
 import { MdEmail } from 'react-icons/md';
 
-import { useState } from 'react'
+import { useState, useContext } from 'react'
+import { ThemeContext } from "../../contexts/ToggleTheme";
 
 export function Presentation() {
+    const { theme } = useContext(ThemeContext);
+
     const [items, setItems] = useState([]);
 
     for (let i = 0; i <= 50; i++) {
@@ -23,7 +26,7 @@ export function Presentation() {
                     {item}
                 </div>
             ))} */}
-            <section className={styles.container}>
+            <section className={`${styles.container} ${styles[theme]}`}>
                 <div className={styles.textPresentation}>
                     <p>Olá, eu sou</p>
                     <RewrittenText />

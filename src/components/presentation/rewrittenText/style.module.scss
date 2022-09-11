@@ -4,4 +4,11 @@
     font-weight: 400;
     font-size: 2.5rem;
     color: var(--titleColor);
+    user-select: none;
+}
+
+@media (max-width: 540px) {
+    .txtRotate {
+        font-size: 1.5rem;
+    }
 }

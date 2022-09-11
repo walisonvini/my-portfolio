@@ -23,7 +23,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "src/components/presentation/rewrittenText/index.tsx", "src/components/presentation/background/index.js"  ],
+, "src/components/presentation/rewrittenText/index.tsx", "src/components/presentation/background/index.js", "src/contexts/ToggleTheme.tsx"  ],
   "exclude": [
     "node_modules"
   ]

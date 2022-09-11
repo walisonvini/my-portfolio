@@ -1,22 +1,24 @@
-html{
-  background-color: var(--backgroundColor)
-}
 body {
   padding: 0;
   margin: 0;
+
+  background-color: var(--dark-backgroundColor);
 }
 
 :root {
   //Colors
   --primaryColor: #675DA6;
   --titleColor: #766BBF;
-  --textColor: white;
 
-  --backgroundColor: #191919;
-  --secundaryBG: #232323;
-  --secundary-backgroundColor: #141920;
-  //dfebf6
-
+  //Dark theme
+  --dark-textColor: #ffffff;
+  --dark-backgroundColor: #191919;
+  --dark-secundary-backgroundColor: #232323;
+  
+  //light theme
+  --light-textColor: #333;
+  --light-backgroundColor: #ffffff;
+  --light-secundary-backgroundColor: #f4f8fd;
 
   //Fonts
   --title: 'DynaPuff';
