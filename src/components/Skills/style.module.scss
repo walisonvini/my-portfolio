@@ -1,0 +1,43 @@
+.skillsContainer {
+    display: inline-block;
+    .title {
+        text-align: center;
+        font-size: 30px;
+        font-family: var(--title);
+        color: var(--titleColor);
+    }
+
+    .skills {
+        display: flex;
+        align-items: center;
+    
+        color: white;
+        min-height: 800px;
+
+        .skillsText {
+           
+            font-family: var(--text);
+            background-color: var(--dark-secundary-backgroundColor);
+
+            font-size: 12px;
+            padding: 20px 30px 20px;
+
+            border-radius: 10px;
+
+            margin-left: 2rem;
+
+            i {
+                font-size: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            span {
+                margin-top: 2px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}

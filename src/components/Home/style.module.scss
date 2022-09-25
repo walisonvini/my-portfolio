@@ -33,31 +33,13 @@
 
         box-shadow: var(--dark-secundary-backgroundColor) 0px 5px 0px;
     }
+
+    
 }
 
-.button {
-    cursor: pointer;
-    border: 0;
-    color: var(--textColor);
-    background: var(--titleColor);
-    padding: 18px 32px;
-    border-radius: 6px;
-    font: 600 22px var(--text);
-    box-shadow: 0 6px 0 #5c50a8;
-    //5e52a8
-    transition: 0.3s;
-
-    display: flex;
-
-    margin-top: 20px;
-    margin-bottom: 20px;
-
-    font-size: inherit;
-}
-
-.button:active {
-    transform: translateY(5px);
-    box-shadow: 0 3px 0 var(--primaryColor);
+.background {
+    position: absolute;
+    z-index: -10;
 }
 
 .dark {
@@ -97,13 +79,6 @@
             a{
                 margin-right: 0.8rem;
             }
-        }
-
-        .button {
-            margin: auto;
-            display: block;
-            margin-top: 2rem;
-            margin-bottom: 2rem;
         }
     }
 }

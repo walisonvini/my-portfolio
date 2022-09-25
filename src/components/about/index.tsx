@@ -13,10 +13,10 @@ export function About(){
             <div className={styles.about}>
                 <img src="my-picture.png" />
                 <p>
-                    Olá, meu nome é Walison Ribeiro, um desenvolvedor full stack autodidata e apaixonado por tecnlogoia,
+                    Olá, meu nome é Walison Ribeiro, um desenvolvedor full stack autodidata e apaixonado por tecnologoia,
                     principalmente na área da programação.
                     
-                    Formado como Técnico em Desenvolvimento de Sistemas e atualmentecursando o segundo semestre em Ciência da Computação 👨‍💻.
+                    Formado como Técnico em Desenvolvimento de Sistemas e atualmente cursando o segundo semestre em Ciência da Computação 👨‍💻.
                     <br />
                     <br />
                     Desde 2018 estudando e criando projetos web, software, mobile e hardware com arduino.

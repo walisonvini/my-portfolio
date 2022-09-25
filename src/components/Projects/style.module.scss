@@ -1,0 +1,32 @@
+.container {
+    .title {
+        font-family: var(--title);
+        color: var(--titleColor);
+        font-size: 30px;
+
+        display: flex;
+        justify-content: center;
+
+        margin-bottom: 4rem;
+        margin-top: 1rem;
+    }
+    .background {
+        background-color: #141920;
+
+        position: absolute;
+        left: 0px;
+        width: 100%;
+        min-height: 510px;
+
+        z-index: -1;
+        pointer-events: none;
+    }
+
+}
+
+@media (max-width: 1045px) {
+    .container {
+        display: block;
+        position: relative;  
+    }
+}

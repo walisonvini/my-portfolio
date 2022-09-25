@@ -1,0 +1,28 @@
+.btn {
+    cursor: pointer;
+    border: 0;
+    background: var(--titleColor);
+    border-radius: 6px;
+    font: 600 22px var(--text);
+    box-shadow: 0 6px 0 #5c50a8;
+    //5e52a8
+    transition: 0.3s;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 2rem;
+
+    font-size: inherit;
+}
+
+.btn:active {
+    transform: translateY(5px);
+    box-shadow: 0 3px 0 var(--primaryColor);
+}
+
+@media (max-width: 930px) {
+    .btn {
+        margin: auto;
+        
+    }
+}
