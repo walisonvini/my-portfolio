@@ -19,7 +19,7 @@ export function Blocks({ title, image, description, icons, linkGitHub }: BlocksP
     return (
         <div className={`${styles.blockContainer} ${styles[theme]}`}>
             <div className={styles.background} />
-            <div>
+            <div className={styles.image}>
                 <img src={image} />
             </div>
             <div className={styles.containerDescription}>

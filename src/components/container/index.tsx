@@ -1,3 +1,4 @@
+import { Footer } from "../Footer"
 import { Navbar } from "../Navbar"
 import styles from "./style.module.scss"
 
@@ -10,6 +11,7 @@ export function Container({ children }) {
             <div className={styles.children}>
                 {children}
             </div>
+            <Footer />
         </div>
     )
 }

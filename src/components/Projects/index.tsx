@@ -12,7 +12,7 @@ export function Projects() {
     const { theme } = useContext(ThemeContext);
 
     return(
-        <section className={`${styles.container} ${styles[theme]}`}>
+        <section id="projects" className={`${styles.container} ${styles[theme]}`}>
             <div className={styles.title}>Projetos</div>
             
             <div className={styles.projects}>

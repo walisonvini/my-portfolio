@@ -12,17 +12,21 @@ import { ThemeContext } from "../../contexts/ToggleTheme";
 export function Navbar() {
     const { theme, toggleTheme } = useContext(ThemeContext);
 
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
     return (
         <>
             <div className={`${styles.container} ${styles[theme]}`}>
                 <div className={styles.containerItems}>
                     <div className={styles.navIcon}>
-                        <a>walison.io()</a>
+                        <a onClick={topFunction}>walison.io()</a>
                     </div>
                     <div className={styles.navText}>
-                        <a>Sobre mim</a>
-                        <a>Habilidades</a>
-                        <a>Projetos</a>
+                        <a href="#about">Sobre mim</a>
+                        <a href="#skills">Habilidades</a>
+                        <a href="#projects">Projetos</a>
                         <span onClick={toggleTheme}>
                             {theme === 'dark' ? <MdOutlineLightMode /> : <MdDarkMode />}
                         </span>
@@ -30,15 +34,15 @@ export function Navbar() {
                 </div>
             </div>
             <nav className={`${styles.mobileMenu} ${styles[theme]}`}>
-                <a className={styles.mobileText}>
+                <a href="#about" className={styles.mobileText}>
                     <i><BsPerson /></i>
                     <span>Sobre mim</span>
                 </a>
-                <a className={styles.mobileText}>
+                <a href="#skills" className={styles.mobileText}>
                     <i><TbTools /></i>
                     <span>Habilidades</span>
                 </a>
-                <a className={styles.mobileText}>
+                <a href="#projects" className={styles.mobileText}>
                     <i><AiOutlineFundProjectionScreen /></i>
                     <span>Projetos</span>
                 </a>

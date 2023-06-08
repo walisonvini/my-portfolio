@@ -1,0 +1,39 @@
+.container {
+    position: relative;
+    width: 100%;
+
+    .computer {
+        position: absolute;
+        width: 92.5%;
+        height: 64%;
+    
+        top: 0;
+        left: -2;
+        margin-top: 1.2rem;
+        margin-left: 1.2rem;
+    }
+    img {
+        max-width: 100%;
+        width: 500px;
+
+        pointer-events: none;
+        user-select: none;
+
+        box-shadow: var(--dark-secundary-backgroundColor) 0px 5px 0px;
+    }
+}
+
+@media (max-width: 1060px) {
+    .container {
+        .computer {
+            .terminal {
+                margin-top: 1.8vh;
+                margin-left: 1.4vw;
+            }
+            
+        }
+        img {
+            width: 400px;
+        }
+    }
+}

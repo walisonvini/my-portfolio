@@ -20,9 +20,11 @@
         width: 30rem;
     }
 
-    img {
-        max-width: 100%;
-        width: 550px;
+    .image {
+        img {
+            max-width: 100%;
+            width: 550px;
+        }
     }
 
     .description {
@@ -73,7 +75,7 @@
     .blockContainer {
         position: relative;
         display: block;
-       
+
         .background {
             width: unset;
             height: 100%;
@@ -82,6 +84,13 @@
 
         .containerDescription {
             margin-left: 0rem;
+            text-align: center;
+            width: 100%;
+        }
+
+        .image {
+            width: 100%;
+            text-align: center;
         }
     }
 }

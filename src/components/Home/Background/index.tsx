@@ -22,7 +22,8 @@ export function Background() {
         const canvas = canvasRef.current
         const ctx = canvas.getContext('2d')
         ctx.canvas.width = 80 * window.innerWidth / 100;
-        ctx.canvas.height = 100 * window.innerHeight / 100;
+        ctx.canvas.height = window.innerHeight;
+        // ctx.canvas.height = 100 * window.innerHeight / 100;
         let particleArray;
 
         Particle.prototype.draw = function () {
@@ -47,7 +48,8 @@ export function Background() {
 
         function init() {
             particleArray = [];
-            for (let i = 0; i < 50; i++) {
+            let totalParticles = innerWidth <= 700 ? 30 : 50;
+            for (let i = 0; i < totalParticles; i++) {
                 let size = Math.random() * 10;
                 let x = Math.random() * (innerWidth - size * 2);
                 let y = Math.random() * (innerHeight - size * 2);

@@ -13,7 +13,7 @@
             margin: 2px;
             font-size: 1.2rem;
         }
-        a {
+        .icons {
             font-size: 1.8rem;
             margin-right: 2rem;
             cursor: pointer;
@@ -22,24 +22,52 @@
         a:hover {
             color: #766bbf;
         }
+
+        .copyEmail {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .copyEmail sup {
+            font-size: 14px;
+            visibility: hidden;
+            width: 85px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 110%;
+            left: 148%;
+            margin-left: -75px;
+            opacity: 0;
+            transition: 0s .6s;
+        }
+        
+        .copyEmail sup::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #555 transparent transparent transparent;
+        }
+
+        .copyEmail:active sup {
+            visibility: visible;
+            opacity: 1;
+            transition: 0s;
+        }
     }
-
-    img {
-        max-width: 100%;
-        width: 500px;
-
-        pointer-events: none;
-        user-select: none;
-
-        box-shadow: var(--dark-secundary-backgroundColor) 0px 5px 0px;
-    }
-
-    
 }
 
 .background {
     position: absolute;
-    z-index: -10;
+    z-index: -100;
 }
 
 .dark {
@@ -76,7 +104,7 @@
         margin-top: 10rem;
 
         .textPresentation {
-            a{
+            .icons {
                 margin-right: 0.8rem;
             }
         }
@@ -86,7 +114,7 @@
 @media (max-width: 700px) {
     .container {
         margin-top: 2rem;
-    }  
+    }
 }
 
 @media (max-width: 350px) {
@@ -95,9 +123,9 @@
             p {
                 font-size: 1rem;
             }
-            a {
+            .icons {
                 font-size: 1.5rem;
             }
         }
-    }  
+    }
 }

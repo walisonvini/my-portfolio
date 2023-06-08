@@ -37,6 +37,8 @@
 
         cursor: pointer;
         a {
+            text-decoration: none;
+            
             padding-left: 1.5rem;
             padding-right: 1.5rem;
 
@@ -57,7 +59,6 @@
 .navText {
     a:hover {
         color: var(--titleColor);
-        transform: translateY(-3px);
     }
 }
 
@@ -96,6 +97,8 @@
 
     z-index: 10;
     .mobileText {
+        text-decoration: none;
+        
         margin-left: 2rem;
         font-family: var(--text);
         font-size: 12px;

@@ -12,7 +12,7 @@ export default function Home() {
           <Container>
             <Presentation />
             <About />
-            {/* <Skills /> */}
+            <Skills />
             <Projects />
           </Container>
       </ThemeProvider>

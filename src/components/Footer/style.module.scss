@@ -1,0 +1,90 @@
+.containerFooter {
+    margin-top: 20rem;
+    background-color: var(--primaryColor);
+
+    height: 4rem;
+    
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+
+    .containerIcons {
+        
+    }
+
+    .copyright {
+        
+    }
+
+    .icons {
+        font-size: 1.5rem;
+        margin-right: 2rem;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .copyEmail {
+        position: relative;
+        display: inline-block;
+    }
+    
+    .copyEmail sup {
+        font-size: 14px;
+        visibility: hidden;
+        width: 85px;
+        background-color: #555;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px;
+        position: absolute;
+        z-index: 1;
+        bottom: 110%;
+        left: 148%;
+        margin-left: -75px;
+        opacity: 0;
+        transition: 0s .6s;
+    }
+    
+    .copyEmail sup::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #555 transparent transparent transparent;
+    }
+    
+    .copyEmail:active sup {
+        visibility: visible;
+        opacity: 1;
+        transition: 0s;
+    }
+}
+
+.dark {
+    a,
+    p {
+        color: var(--dark-textColor);
+    }
+}
+
+.light {
+    a,
+    p {
+        color: var(--light-textColor);
+    }
+}
+
+
+@media (max-width: 700px) {
+    .containerFooter {
+        margin-bottom: 4rem;
+
+        .icons {
+            margin-right: 1rem;
+        }
+    }
+}
