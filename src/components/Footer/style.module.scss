@@ -1,29 +1,20 @@
 .containerFooter {
-    margin-top: 20rem;
-    background-color: var(--primaryColor);
-
-    height: 4rem;
-    
-    display: flex;
-    align-items: center;
-    justify-content:space-around;
+    margin-top: 22rem;
+    padding: 40px 0;
 
     .containerIcons {
-        
+        text-align: center;
+        padding-bottom: 25px;
     }
 
     .copyright {
-        
-    }
-
-    .icons {
-        font-size: 1.5rem;
-        margin-right: 2rem;
-        cursor: pointer;
-        text-decoration: none;
+        margin-top: 50px;
+        text-align: center;
+        font-size: 13px;
     }
 
     .copyEmail {
+        cursor: pointer;
         position: relative;
         display: inline-block;
     }
@@ -39,8 +30,8 @@
         padding: 5px;
         position: absolute;
         z-index: 1;
-        bottom: 110%;
-        left: 148%;
+        bottom: 125%;
+        left: 120%;
         margin-left: -75px;
         opacity: 0;
         transition: 0s .6s;
@@ -64,27 +55,95 @@
     }
 }
 
+.containerIcons a {
+    font-size: 24px;
+    color: inherit;
+    width: 40px;
+    height: 40px;
+    line-height: 47px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 15px;
+    opacity: 0.75;
+}
+
+.containerFooter .containerIcons a:hover {
+    color: #766bbf;
+    border-color: #766bbf;
+}
+
+.containerFooter ul {
+    padding: 0;
+    list-style: none;
+    font-size: 18px;
+    line-height: 1.6px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.containerFooter ul li a {
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.containerFooter ul li {
+    display: inline-block;
+    padding: 0 15px;
+}
+
+.containerFooter ul li a:hover {
+    color: #766bbf;
+}
+
 .dark {
-    a,
-    p {
+    background-color: #141920;
+
+    ul li a {
         color: var(--dark-textColor);
+    }
+    
+    .containerIcons {
+        color: var(--dark-textColor);
+
+        a {
+            border: 1px solid #ccc;
+        }
+    }
+
+    .copyright {
+        color: #aaa;
     }
 }
 
 .light {
-    a,
-    p {
+    background-color: var(--light-backgroundColor);
+
+    ul li a {
         color: var(--light-textColor);
     }
-}
+    
+    .containerIcons {
+        color: var(--light-textColor);
 
+        a {
+            border: 1px solid var(--light-textColor);
+        }
+    }
+
+    .copyright {
+        color: #535252;
+    }
+}
 
 @media (max-width: 700px) {
     .containerFooter {
         margin-bottom: 4rem;
+    }
+}
 
-        .icons {
-            margin-right: 1rem;
-        }
+@media (max-width: 320px) {
+    .containerFooter ul {
+        display: flex;
     }
 }
