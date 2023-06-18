@@ -9,7 +9,7 @@ export function About(){
     const semesters = ['primeiro', 'segundo', 'terceiro', 'quarto', 'quinto', 'sexto', 'sétimo', 'oitavo'];
     var semester;
     const date = new Date();
-    console.log(date.getMonth());
+    
     if(date.getFullYear() == 2022) {
         if(date.getMonth()+1 <= 6)
             semester = semesters[0]
