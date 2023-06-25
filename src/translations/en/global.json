@@ -1,0 +1,24 @@
+{
+    "common": {
+        "aboutMe": "About me",
+        "skills": "Skills",
+        "projects": "Projects",
+        "copied": "Copied"
+    },
+    "home": {
+        "hiIam": "Hi, I am",
+        "stack": "A full stack developer",
+        "resume": "Download Resume"
+    },
+    "about": {
+        "welcomeMessage": "Hello, my name is Walison Ribeiro, a self-taught full stack developer passionate about technology, especially in the field of programming. ",
+        "education": "I graduated as a Systems Development Technician and I am currently in the {{semester}} semester of Computer Science 👨‍💻. ",
+        "projects": "Since 2018, I have been studying and creating web, software, mobile, and hardware projects with Arduino. What I value the most in my code is organization and testing. ",
+        "community": "I love the developer community and how everyone can contribute to the development of our applications. So let's contribute reciprocally, connect with me on ",
+        "MartinFowler": "Any fool can write code that a computer can understand. Good programmers write code that humans can understand"
+    },
+    "terminal": {
+        "typeHelp": "Type 'help' to get the list of commands.",
+        "UnrecognizedCommand": "is not recognized as an internal or external command, operable program or batch file."
+    }
+}

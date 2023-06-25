@@ -5,14 +5,16 @@ import { TbBrandJavascript, TbBrandPython } from 'react-icons/tb';
 import { FaPhp, FaLaravel, FaVuejs, FaReact, FaDatabase } from 'react-icons/fa';
 
 import { useContext } from "react";
+import { useTranslation } from 'react-i18next';
 import { ThemeContext } from "../../contexts/ToggleTheme";
 
 export function Skills() {
     const { theme } = useContext(ThemeContext);
+    const [t, i18n] = useTranslation("global");
 
     return (
         <section id="skills" className={`${styles.skillsContainer} ${styles[theme]}`}>
-            <div className={styles.title}>Habilidades</div>
+            <div className={styles.title}>{t("common.skills")}</div>
             <div className={styles.skills}>
                 <a className={styles.skillsText}>
                     <i><FaPhp /></i>

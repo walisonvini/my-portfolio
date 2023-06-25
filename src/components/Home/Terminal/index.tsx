@@ -1,8 +1,11 @@
 import { useState, useRef, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import styles from "./style.module.scss"
 
 export function Terminal() {
-    const [commandInput, setCommandInput] = useState([{text: "Digite 'help' para obter a lista de comandos", error: true}]);
+    const [t, i18n] = useTranslation("global");
+
+    const [commandInput, setCommandInput] = useState([{text: t("terminal.typeHelp"), error: true}]);
     const [commandHistory, seCommandHistory] = useState([]);
     const [inputValue, setInputValue] = useState('');
     const [lastHistoryPosition, setLastHistoryPosition] = useState(commandHistory.length);
@@ -40,7 +43,7 @@ export function Terminal() {
                     }
                     setCommandInput((prevCommands) => [
                         ...prevCommands, 
-                        {text: `'${inputValue}' não é reconhecido como um comando interno ou externo, programa operável ou arquivo em lote.`, error: true}
+                        {text: `'${inputValue}' ${t("terminal.UnrecognizedCommand")}`, error: true}
                     ]);
             }
 

@@ -1,10 +1,12 @@
 import styles from "./style.module.scss"
 
 import { useContext } from "react";
+import { useTranslation } from "react-i18next";
 import { ThemeContext } from "../../contexts/ToggleTheme";
 
 export function About(){
     const { theme } = useContext(ThemeContext);
+    const [t, i18n] = useTranslation("global");
 
     const semesters = ['primeiro', 'segundo', 'terceiro', 'quarto', 'quinto', 'sexto', 'sétimo', 'oitavo'];
     var semester;
@@ -37,28 +39,24 @@ export function About(){
 
     return(
         <section id="about" className={`${styles.container} ${styles[theme]}`}>
-            <div className={styles.title}>Sobre mim</div>
+            <div className={styles.title}>{t("common.aboutMe")}</div>
             <div className={styles.background}></div>
             <div className={styles.about}>
                 <img src="my-picture.png" />
                 <p>
-                    Olá, meu nome é Walison Ribeiro, um desenvolvedor full stack autodidata e apaixonado por tecnologia,
-                    principalmente na área da programação.
-                    
-                    Formado como Técnico em Desenvolvimento de Sistemas e atualmente cursando o { semester } semestre em Ciência da Computação 👨‍💻.
+                    {t("about.welcomeMessage")}
+
+                    {t("about.education", { semester: semester })}
                     <br />
                     <br />
-                    Desde 2018 estudando e criando projetos web, software, mobile e hardware com arduino.
-                    O que mais prezo em meus códigos é a organização e testes.
+                    {t("about.projects")}
                     
-                    Amo a comunidade dev e como todos podem contribuir com o desenvolvimento de nossas aplicações. Então vamos contribuir reciprocamente,
-                    conecte comigo no <a href="https://github.com/walisonvini" target="_blank" rel="noopener noreferrer">GitHub</a> :D
+                    {t("about.community")} <a href="https://github.com/walisonvini" target="_blank" rel="noopener noreferrer">GitHub</a> :D
                 </p>
                 
             </div>
             <h4>
-                "Qualquer tolo consegue escrever código que um computador entenda.
-                Bons programadores escrevem código que humanos possam entender"
+                "{t("about.MartinFowler")}"
                 <p>Martin Fowler</p>
             </h4>
         </section>

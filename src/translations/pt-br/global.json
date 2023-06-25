@@ -1,0 +1,24 @@
+{
+    "common": {
+        "aboutMe": "Sobre mim",
+        "skills": "Habilidades",
+        "projects": "Projetos", 
+        "copied": "Copiado"
+    },
+    "home": {
+        "hiIam": "Olá, eu sou",
+        "stack": "Desenvolvedor full-stack",
+        "resume": "Download Currículo"
+    },
+    "about": {
+        "welcomeMessage": "Olá, meu nome é Walison Ribeiro, um desenvolvedor full stack autodidata e apaixonado por tecnologia, principalmente na área da programação. ",
+        "education": "Formado como Técnico em Desenvolvimento de Sistemas e atualmente cursando o {{semester}} semestre em Ciência da Computação 👨‍💻. ",
+        "projects": "Desde 2018 estudando e criando projetos web, software, mobile e hardware com arduino. O que mais prezo em meus códigos é a organização e testes. ",
+        "community": "Amo a comunidade dev e como todos podem contribuir com o desenvolvimento de nossas aplicações. Então vamos contribuir reciprocamente, conecte comigo no ",
+        "MartinFowler": "Qualquer tolo consegue escrever código que um computador entenda. Bons programadores escrevem código que humanos possam entender"
+    },
+    "terminal": {
+        "typeHelp": "Digite 'help' para obter a lista de comandos",
+        "UnrecognizedCommand": "não é reconhecido como um comando interno ou externo, programa operável ou arquivo em lote."
+    }
+}

@@ -8,11 +8,13 @@ import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 import { MdEmail } from 'react-icons/md';
 
 import { useContext } from 'react'
+import { useTranslation } from "react-i18next";
 import { ThemeContext } from "../../contexts/ToggleTheme";
 import { Button } from "../Button";
 
 export function Presentation() {
     const { theme } = useContext(ThemeContext);
+    const [t, i18n] = useTranslation("global");
 
     function copyEmail() {
         navigator.clipboard.writeText("walison.vinicios12@gmail.com")
@@ -25,13 +27,13 @@ export function Presentation() {
             </div>
             <section className={`${styles.container} ${styles[theme]}`}>
                 <div className={styles.textPresentation}>
-                    <p>Olá, eu sou</p>
+                    <p>{t("home.hiIam")}</p>
                     <RewrittenText />
                     <noscript><h1>Walison Ribeiro</h1></noscript>
-                    <p>Desenvolvedor full-stack</p>
+                    <p>{t("home.stack")}</p>
                     <a href="Walison Resume.pdf" download="Walison Resume.pdf">
                         <Button
-                            text="Download Currículo"
+                            text={t("home.resume")}
                             style={{
                                 padding: "18px 32px",
                                 color: "black",

@@ -28,7 +28,7 @@ export function Blocks({ title, image, description, icons, linkGitHub }: BlocksP
                     {description}
                 </p>
                 <div className={styles.technology}>
-                    {icons.map((item) => <a>{item}</a>)}
+                    {icons.map((item, index) => <a key={index}>{item}</a>)}
                 </div>
                 <a href={linkGitHub} target="_blank" rel="noopener noreferrer">
                     <Button

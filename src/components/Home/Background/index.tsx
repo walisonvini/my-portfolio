@@ -8,7 +8,7 @@ export function Background() {
 
     const canvasRef = useRef(null)
 
-    function Particle(x, y, directionX, directionY, size, color, text) {
+    function Particle(x: number, y: number, directionX: number, directionY: number, size: number, color: string, text: number) {
         this.x = x;
         this.y = y;
         this.directionX = directionX;

@@ -1,6 +1,7 @@
 import styles from './style.module.scss'
 
 import { useContext } from "react";
+import { useTranslation } from 'react-i18next';
 import { ThemeContext } from "../../contexts/ToggleTheme";
 import { Blocks } from './Blocks';
 
@@ -10,10 +11,11 @@ import * as TbIcon from 'react-icons/tb';
 
 export function Projects() {
     const { theme } = useContext(ThemeContext);
+    const [t, i18n] = useTranslation("global");
 
     return(
         <section id="projects" className={`${styles.container} ${styles[theme]}`}>
-            <div className={styles.title}>Projetos</div>
+            <div className={styles.title}>{t("common.projects")}</div>
             
             <div className={styles.projects}>
                 <Blocks
