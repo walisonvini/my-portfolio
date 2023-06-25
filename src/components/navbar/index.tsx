@@ -39,13 +39,15 @@ export function Navbar() {
                         <a href="#about">{t("common.aboutMe")}</a>
                         <a href="#skills">{t("common.skills")}</a>
                         <a href="#projects">{t("common.projects")}</a>
+                        <div className={styles.languageSwitcher}>
+                            <select onChange={handleChange}>
+                                <option value="en"><img src="us.png" />English</option>
+                                <option value="ptBr"><img src="france-flag.png" alt="Français" />Português</option>
+                            </select>
+                        </div>
                         <span onClick={toggleTheme}>
                             {theme === 'dark' ? <MdOutlineLightMode /> : <MdDarkMode />}
                         </span>
-                        <select name="" id="" onChange={handleChange}>
-                            <option value="ptBr">pt-br</option>
-                            <option value="en">en</option>
-                        </select>
                     </div>
                 </div>
             </div>

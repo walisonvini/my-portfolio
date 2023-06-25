@@ -62,6 +62,63 @@
     }
 }
 
+.languageSwitcher {
+    position: relative;
+    display: inline-block;
+    
+    select {
+        padding: 8px 30px 8px 8px; // Aumente o padding à direita para acomodar a bandeira
+        font-size: 14px;
+        border: none;
+        border-radius: 4px;
+        appearance: none;
+        background-color: transparent;
+        color: white;
+
+        font-family: var(--text);
+        font-weight: 600;
+
+        cursor: pointer;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 12px;
+        transform: translateY(-50%);
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 6px 4px 0 4px;
+        border-color: white transparent transparent transparent;
+        pointer-events: none;
+    }
+
+    select::-ms-expand {
+        display: none;
+    }
+
+    option {
+        padding-left: 20px; // Espaço para acomodar a bandeira
+        color: black;
+
+        font-family: var(--text);
+        font-weight: 600;
+
+        img {
+            width: 16px;
+            height: 12px;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+    }
+}
+  
 .dark {
     background-color: var(--dark-secundary-backgroundColor);
     a,
@@ -74,8 +131,16 @@
     background-color: var(--light-backgroundColor);
 
     a,
-    span {
+    span,
+    select,
+    options {
         color: var(--light-textColor);
+    }
+
+    .languageSwitcher {
+        &::before {
+            border-color: var(--light-textColor) transparent transparent transparent;
+        }
     }
 }
 
