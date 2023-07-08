@@ -1,6 +1,16 @@
 .container {
     word-break: break-word;
     margin-bottom: 20rem;
+
+    p,
+    h4 {
+        color: var(--text-primary);
+    }
+
+    h4{
+        background-color: var(--border);
+    }
+
     .title {
         font-family: var(--title);
         color: var(--titleColor);
@@ -14,7 +24,7 @@
     }
 
     .background {
-        background-color: #141920;
+        background-color: var(--background-secondary);
 
         position: absolute;
         left: 0px;
@@ -64,31 +74,6 @@
         p {
             float: right;
         }
-    }
-}
-
-.dark {
-    p,
-    h4 {
-        color: var(--dark-textColor);
-    }
-    h4{
-        background-color: var(--dark-secundary-backgroundColor);
-    }
-}
-
-.light {
-    p,
-    h4 {
-        color: var(--light-textColor);
-    }
-
-    h4{
-        background-color: var(--light-secundary-backgroundColor);
-    }
-
-    .background {
-        background-color: var(--light-backgroundColor);
     }
 }
 

@@ -1,3 +1,36 @@
+:root {
+  //Colors
+  --primaryColor: #675DA6;
+  --titleColor: #766BBF;
+
+  //Fonts
+  --title: 'DynaPuff';
+  --text: 'Open Sans';
+
+  --background: #111;
+  --background-secondary: #141920;
+  --border: #191919;
+
+  --text-primary: #ffffff;
+}
+
+[data-theme='dark'] {
+  --background: #111;
+  --background-secondary: #141920;
+  --border: #191919;
+
+  --text-primary: #ffffff;
+}
+
+[data-theme='light'] {
+  --background: #ffffff;
+  --background-secondary: white;
+  --border: white;
+
+  --text-primary: #333;
+}
+
+
 html {
   scroll-behavior: smooth;
 }
@@ -6,25 +39,5 @@ body {
   padding: 0;
   margin: 0;
 
-  background-color: var(--dark-backgroundColor);
-}
-
-:root {
-  //Colors
-  --primaryColor: #675DA6;
-  --titleColor: #766BBF;
-
-  //Dark theme
-  --dark-textColor: #ffffff;
-  --dark-backgroundColor: #111;
-  --dark-secundary-backgroundColor: #191919;
-  
-  //light theme
-  --light-textColor: #333;
-  --light-backgroundColor: #ffffff;
-  --light-secundary-backgroundColor: #f4f8fd;
-
-  //Fonts
-  --title: 'DynaPuff';
-  --text: 'Open Sans';
+  background-color: var(--background);
 }

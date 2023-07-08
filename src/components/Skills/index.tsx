@@ -13,7 +13,7 @@ export function Skills() {
     const [t, i18n] = useTranslation("global");
 
     return (
-        <section id="skills" className={`${styles.skillsContainer} ${styles[theme]}`}>
+        <section id="skills" className={styles.skillsContainer} data-theme={theme}>
             <div className={styles.title}>{t("common.skills")}</div>
             <div className={styles.skills}>
                 <a className={styles.skillsText}>

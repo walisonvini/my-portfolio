@@ -4,10 +4,14 @@
     justify-content: center;
     align-items: center;
 
-    color: white;
     font-family: var(--text);
 
     margin-top: 8rem;
+
+    p,
+    a {
+        color: var(--text-primary);
+    }
 
     strong {
         font-size: 1.5rem;
@@ -41,7 +45,7 @@
     }
 
     .background {
-        background-color: #141920;
+        background-color: var(--background-secondary);
 
         position: absolute;
         left: 0px;
@@ -50,24 +54,6 @@
 
         z-index: -1;
         pointer-events: none;
-    }
-}
-
-.dark {
-    p,
-    a {
-        color: var(--dark-textColor);
-    }
-}
-
-.light {
-    p,
-    a {
-        color: var(--light-textColor);
-    }
-
-    .background {
-        background-color: var(--light-backgroundColor);
     }
 }
 

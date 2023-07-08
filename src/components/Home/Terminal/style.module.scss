@@ -19,7 +19,7 @@
         pointer-events: none;
         user-select: none;
 
-        box-shadow: var(--dark-secundary-backgroundColor) 0px 5px 0px;
+        box-shadow: var(--background-secondary) 0px 5px 0px;
     }
 
     .terminal {
@@ -47,8 +47,6 @@
         }
     }
 }
-
-
 
 .terminal::-webkit-scrollbar {
     width: 5px;

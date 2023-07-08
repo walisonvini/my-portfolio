@@ -1,11 +1,15 @@
 .container {
-    color: var(--textColor);
     font-family: var(--text);
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     height: calc(95vh - 100px);
+
+    a,
+    p {
+        color: var(--text-primary);
+    }
 
     .textPresentation {
         margin-bottom: 2rem;
@@ -20,7 +24,7 @@
             text-decoration: none;
         }
         a:hover {
-            color: #766bbf;
+            color: var(--titleColor);
         }
 
         .copyEmail {
@@ -68,20 +72,6 @@
 .background {
     position: absolute;
     z-index: -999;
-}
-
-.dark {
-    a,
-    p {
-        color: var(--dark-textColor);
-    }
-}
-
-.light {
-    a,
-    p {
-        color: var(--light-textColor);
-    }
 }
 
 //respoive

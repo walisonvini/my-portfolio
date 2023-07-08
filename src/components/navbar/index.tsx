@@ -30,7 +30,7 @@ export function Navbar() {
     }
     return (
         <>
-            <div className={`${styles.container} ${styles[theme]}`}>
+            <div className={styles.container} data-theme={theme}>
                 <div className={styles.containerItems}>
                     <div className={styles.navIcon}>
                         <a onClick={topFunction}>walison.io()</a>
@@ -41,13 +41,19 @@ export function Navbar() {
                         <a href="#projects">{t("common.projects")}</a>
                         <div className={styles.languageSwitcher}>
                             <select onChange={handleChange}>
-                                <option value="en"><img src="us.png" />English</option>
-                                <option value="ptBr"><img src="france-flag.png" alt="Français" />Português</option>
+                                <option value="en">English</option>
+                                <option value="ptBr">Português</option>
                             </select>
                         </div>
-                        <span onClick={toggleTheme}>
-                            {theme === 'dark' ? <MdOutlineLightMode /> : <MdDarkMode />}
-                        </span>
+                        {theme === 'light' ? (
+                            <span onClick={() => toggleTheme('dark')}>
+                                <MdDarkMode />
+                            </span>
+                        ) : (
+                            <span onClick={() => toggleTheme('light')}>
+                                <MdOutlineLightMode />
+                            </span>
+                        )}
                     </div>
                 </div>
             </div>
@@ -64,9 +70,15 @@ export function Navbar() {
                     <i><AiOutlineFundProjectionScreen /></i>
                     <span>{t("common.projects")}</span>
                 </a>
-                <span className={styles.mobileToggleTheme} onClick={toggleTheme}>
-                    {theme === 'dark' ? <MdOutlineLightMode /> : <MdDarkMode />}
-                </span>
+                {theme === 'light' ? (
+                    <span onClick={() => toggleTheme('dark')}>
+                        <MdDarkMode />
+                    </span>
+                ) : (
+                    <span onClick={() => toggleTheme('light')}>
+                        <MdOutlineLightMode />
+                    </span>
+                )}
                 <select name="" id="" onChange={handleChange}>
                     <option value="ptBr">pt-br</option>
                     <option value="en">en</option>

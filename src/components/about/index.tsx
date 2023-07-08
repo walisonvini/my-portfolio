@@ -38,7 +38,7 @@ export function About(){
     }
 
     return(
-        <section id="about" className={`${styles.container} ${styles[theme]}`}>
+        <section id="about" className={styles.container} data-theme={theme}>
             <div className={styles.title}>{t("common.aboutMe")}</div>
             <div className={styles.background}></div>
             <div className={styles.about}>

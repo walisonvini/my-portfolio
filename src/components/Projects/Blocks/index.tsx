@@ -17,7 +17,7 @@ export function Blocks({ title, image, description, icons, linkGitHub }: BlocksP
     const { theme } = useContext(ThemeContext);
 
     return (
-        <div className={`${styles.blockContainer} ${styles[theme]}`}>
+            <div className={styles.blockContainer} data-theme={theme}>
             <div className={styles.background} />
             <div className={styles.image}>
                 <img src={image} />

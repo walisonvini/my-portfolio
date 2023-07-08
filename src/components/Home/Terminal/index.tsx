@@ -1,9 +1,12 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useContext } from "react";
 import { useTranslation } from "react-i18next";
 import styles from "./style.module.scss"
 
+import { ThemeContext } from "../../../contexts/ToggleTheme";
+
 export function Terminal() {
     const [t, i18n] = useTranslation("global");
+    const { theme, toggleTheme } = useContext(ThemeContext);
 
     const [commandInput, setCommandInput] = useState([{text: t("terminal.typeHelp"), error: true}]);
     const [commandHistory, seCommandHistory] = useState([]);
@@ -27,6 +30,16 @@ export function Terminal() {
         inputRef.current.focus();
     }
 
+    function handleDefaultCommand(inputValue: string) {
+        if (inputValue.trim() === '') {
+          return;
+        }
+        setCommandInput((prevCommands) => [
+          ...prevCommands,
+          { text: `'${inputValue}' ${t("terminal.UnrecognizedCommand")}`, error: true },
+        ]);
+    }
+
     const handleKeyPress = (event) => {
         if (event.key === 'Enter') {
             setCommandInput((prevCommands) => [...prevCommands, {text: inputValue, error: false}]);
@@ -37,14 +50,11 @@ export function Terminal() {
                 case 'clear':
                     setCommandInput([])
                     break;
+                case 'theme hacker':
+                    toggleTheme('hacker')
+                    break;
                 default:
-                    if (inputValue.trim() === '') {
-                        break;
-                    }
-                    setCommandInput((prevCommands) => [
-                        ...prevCommands, 
-                        {text: `'${inputValue}' ${t("terminal.UnrecognizedCommand")}`, error: true}
-                    ]);
+                    handleDefaultCommand(inputValue);
             }
 
             setInputValue('');

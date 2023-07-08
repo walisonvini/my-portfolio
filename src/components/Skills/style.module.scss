@@ -3,6 +3,15 @@
     min-height: 650px;
     width: 100%;
 
+    i,
+    span {
+        color: var(--text-primary);
+    }
+    
+    a {
+        background-color: var(--border);
+    }
+
     .title {
         text-align: center;
         font-size: 30px;
@@ -17,8 +26,6 @@
 
         margin-top: 15%;
         width: 100%;
-
-        color: white;
 
         .skillsText {
             font-family: var(--text);
@@ -44,27 +51,5 @@
                 justify-content: center;
             }
         }
-    }
-}
-
-.dark {
-    i,
-    span {
-        color: var(--dark-textColor);
-    }
-
-    a {
-        background-color: var(--dark-secundary-backgroundColor);
-    }
-}
-
-.light {
-    i,
-    span {
-        color: var(--light-textColor);
-    }
-    
-    a {
-        background-color: var(--light-backgroundColor);
     }
 }

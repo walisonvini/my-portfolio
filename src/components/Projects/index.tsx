@@ -14,7 +14,7 @@ export function Projects() {
     const [t, i18n] = useTranslation("global");
 
     return(
-        <section id="projects" className={`${styles.container} ${styles[theme]}`}>
+        <section id="projects" className={styles.container} data-theme={theme}> 
             <div className={styles.title}>{t("common.projects")}</div>
             
             <div className={styles.projects}>

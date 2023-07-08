@@ -25,7 +25,7 @@ export function Presentation() {
             <div className={styles.background}>
                 <Background />
             </div>
-            <section className={`${styles.container} ${styles[theme]}`}>
+            <section className={styles.container} data-theme={theme}>
                 <div className={styles.textPresentation}>
                     <p>{t("home.hiIam")}</p>
                     <RewrittenText />

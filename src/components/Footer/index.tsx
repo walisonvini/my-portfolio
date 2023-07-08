@@ -17,7 +17,7 @@ export function Footer() {
     }
 
     return (
-        <footer className={`${styles.containerFooter} ${styles[theme]}`}>
+        <footer className={styles.containerFooter} data-theme={theme}>
             <div className={styles.containerIcons}>
                 <a href="https://github.com/walisonvini" target="_blank" rel="noopener noreferrer"><AiFillGithub /></a>
                 <a href="https://www.linkedin.com/in/walison-vinicios-alves-ribeiro-259705198/" target="_blank" rel="noopener noreferrer"><AiFillLinkedin /></a>

@@ -4,15 +4,25 @@
 
     font-family: var(--text);
 
+    background-color: var(--background-secondary);
+
     .containerIcons {
         text-align: center;
         padding-bottom: 25px;
+
+        color: var(--text-primary);
+    }
+
+    ul li a {
+        color: var(--text-primary);
     }
 
     .copyright {
         margin-top: 50px;
         text-align: center;
         font-size: 13px;
+
+        color: var(--text-primary);
     }
 
     .copyEmail {
@@ -71,8 +81,8 @@
 }
 
 .containerFooter .containerIcons a:hover {
-    color: #766bbf;
-    border-color: #766bbf;
+    color: var(--titleColor);
+    border-color: var(--titleColor);
 }
 
 .containerFooter ul {
@@ -95,47 +105,7 @@
 }
 
 .containerFooter ul li a:hover {
-    color: #766bbf;
-}
-
-.dark {
-    background-color: #141920;
-
-    ul li a {
-        color: var(--dark-textColor);
-    }
-    
-    .containerIcons {
-        color: var(--dark-textColor);
-
-        a {
-            border: 1px solid #ccc;
-        }
-    }
-
-    .copyright {
-        color: #aaa;
-    }
-}
-
-.light {
-    background-color: var(--light-backgroundColor);
-
-    ul li a {
-        color: var(--light-textColor);
-    }
-    
-    .containerIcons {
-        color: var(--light-textColor);
-
-        a {
-            border: 1px solid var(--light-textColor);
-        }
-    }
-
-    .copyright {
-        color: #535252;
-    }
+    color: var(--titleColor);
 }
 
 @media (max-width: 700px) {

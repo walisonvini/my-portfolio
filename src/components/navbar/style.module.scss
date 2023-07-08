@@ -3,9 +3,16 @@
     box-shadow: rgb(0 0 0 / 5%) 0px 5px 10px;
     position: fixed;
 
+    background-color: var(--border);
+
     width: 100vw;
     top: 0;
 
+    a,
+    span {
+        color: var(--text-primary);
+    }
+    
     .containerItems {
         width: 80vw;
         height: 60px;
@@ -73,7 +80,7 @@
         border-radius: 4px;
         appearance: none;
         background-color: transparent;
-        color: white;
+        color: var(--text-primary);
 
         font-family: var(--text);
         font-weight: 600;
@@ -95,7 +102,7 @@
         height: 0;
         border-style: solid;
         border-width: 6px 4px 0 4px;
-        border-color: white transparent transparent transparent;
+        border-color: var(--text-primary) transparent transparent transparent;
         pointer-events: none;
     }
 
@@ -115,31 +122,6 @@
             height: 12px;
             margin-right: 8px;
             vertical-align: middle;
-        }
-    }
-}
-  
-.dark {
-    background-color: var(--dark-secundary-backgroundColor);
-    a,
-    span {
-        color: var(--dark-textColor);
-    }
-}
-
-.light {
-    background-color: var(--light-backgroundColor);
-
-    a,
-    span,
-    select,
-    options {
-        color: var(--light-textColor);
-    }
-
-    .languageSwitcher {
-        &::before {
-            border-color: var(--light-textColor) transparent transparent transparent;
         }
     }
 }
