@@ -57,7 +57,7 @@ export function Navbar() {
                     </div>
                 </div>
             </div>
-            <nav className={`${styles.mobileMenu} ${styles[theme]}`}>
+            <nav className={styles.mobileMenu} data-theme={theme}>
                 <a href="#about" className={styles.mobileText}>
                     <i><BsPerson /></i>
                     <span>{t("common.aboutMe")}</span>
@@ -71,18 +71,20 @@ export function Navbar() {
                     <span>{t("common.projects")}</span>
                 </a>
                 {theme === 'light' ? (
-                    <span onClick={() => toggleTheme('dark')}>
+                    <span className={styles.mobileToggleTheme} onClick={() => toggleTheme('dark')}>
                         <MdDarkMode />
                     </span>
                 ) : (
-                    <span onClick={() => toggleTheme('light')}>
+                    <span className={styles.mobileToggleTheme} onClick={() => toggleTheme('light')}>
                         <MdOutlineLightMode />
                     </span>
                 )}
-                <select name="" id="" onChange={handleChange}>
-                    <option value="ptBr">pt-br</option>
-                    <option value="en">en</option>
-                </select>
+                <div className={styles.languageSwitcher}>
+                    <select onChange={handleChange}>
+                        <option value="en">English</option>
+                        <option value="ptBr">Português</option>
+                    </select>
+                </div>
             </nav>
         </>
     )

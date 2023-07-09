@@ -10,6 +10,7 @@
   --background: #111;
   --background-secondary: #141920;
   --border: #191919;
+  --button-border: #5c50a8;
 
   --text-primary: #ffffff;
 }
@@ -23,13 +24,43 @@
 }
 
 [data-theme='light'] {
-  --background: #ffffff;
-  --background-secondary: white;
-  --border: white;
-
-  --text-primary: #333;
+  --background: #f2f5fa;
+  --background-secondary: #ffffff;
+  --border: #d2d8e4;
+  --text-primary: #333333;
 }
 
+[data-theme='hacker'] {
+  --primaryColor: #00ffff;
+  --titleColor: #00ffff;
+
+  --background: #000000;
+  --background-secondary: #0a0a0a;
+  --border: #0f0e0e;
+  --text-primary: #00ff00;
+  --button-border: #22caca;
+
+  --title: 'VT323', monospace;
+  --text: 'Orbitron', sans-serif;
+}
+
+[data-theme='ocean'] {
+  --background: #005c80;
+  --background-secondary: #0080a6;
+  --border: #ffae03;
+  --text-primary: #ffffff;
+  --title: 'Bebas Neue', sans-serif;
+  --text: 'Roboto', sans-serif;
+}
+
+[data-theme='cosmic'] {
+  --background: #221133;
+  --background-secondary: #331144;
+  --border: #ff0077;
+  --text-primary: #ffffff;
+  --title: 'Montserrat', sans-serif;
+  --text: 'Raleway', sans-serif;
+}
 
 html {
   scroll-behavior: smooth;

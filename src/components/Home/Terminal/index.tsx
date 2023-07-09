@@ -50,11 +50,25 @@ export function Terminal() {
                 case 'clear':
                     setCommandInput([])
                     break;
+                case 'theme dark':
+                    toggleTheme('dark')
+                    break;
+                case 'theme light':
+                    toggleTheme('light')
+                    break;
                 case 'theme hacker':
                     toggleTheme('hacker')
                     break;
+                case 'theme ocean':
+                    toggleTheme('ocean')
+                    break;
+                case 'theme cosmic':
+                    toggleTheme('cosmic')
+                    break                    
                 default:
-                    handleDefaultCommand(inputValue);
+                    if (inputValue && inputValue.trim() !== '') {
+                        handleDefaultCommand(inputValue);
+                    }
             }
 
             setInputValue('');

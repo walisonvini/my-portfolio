@@ -6,6 +6,26 @@ import styles from "./style.module.scss"
 export function Background() {
     const { theme } = useContext(ThemeContext);
 
+    let color: string;
+
+    switch(theme) {
+        case 'hacker':
+            color = "#2a7d2a"
+            break;
+        case 'dark':
+            color = "#191919"
+            break;
+        case 'light':
+            color = "#808080"
+            break;
+        case 'ocean':
+            color = "#00bfff"
+            break;
+        case 'cosmic':
+            color = "#ff0077"
+            break;
+    }
+
     const canvasRef = useRef(null)
 
     function Particle(x: number, y: number, directionX: number, directionY: number, size: number, color: string, text: number) {
@@ -29,8 +49,8 @@ export function Background() {
         Particle.prototype.draw = function () {
             ctx.beginPath();
             ctx.font = "600 32px Open Sans"
-            ctx.fillText(this.text, this.x, this.y);
             ctx.fillStyle = this.color;
+            ctx.fillText(this.text, this.x, this.y);
         }
 
         Particle.prototype.update = function () {
@@ -55,7 +75,6 @@ export function Background() {
                 let y = Math.random() * (innerHeight - size * 2);
                 let directionX = (Math.random() * 1) - .5;
                 let directionY = (Math.random() * 1) - .5;
-                let color = '#191919'
                 let text = Math.floor(Math.random() * 2);
 
                 particleArray.push(new Particle(x, y, directionX, directionY, size, color, text));
@@ -86,12 +105,11 @@ export function Background() {
             let y = e.offsetY;
             let directionX = (Math.random() * 1) - .5;
             let directionY = (Math.random() * 1) - .5;
-            let color = '#191919'
             let text = Math.floor(Math.random() * 2);
 
             particleArray.push(new Particle(x, y, directionX, directionY, size, color, text));
         });
-    }, [])
+    }, [theme])
 
     return (
         <canvas ref={canvasRef} className={styles.background}></canvas>

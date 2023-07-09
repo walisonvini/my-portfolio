@@ -142,7 +142,14 @@
 
     border-top: solid 2px white;
 
-    z-index: 10;
+    background-color: var(--border);
+
+    a,
+    span {
+        color: var(--text-primary);
+    }
+
+    z-index: 9999;
     .mobileText {
         text-decoration: none;
         
@@ -161,7 +168,7 @@
     }
 
     .mobileToggleTheme{
-        margin-left: 1.5rem;
+        margin-left: 2rem;
         margin-top: 15px;
         font-size: 18px;
     }
@@ -173,5 +180,27 @@
     }
     .container {
         display: none;
+    }
+    .languageSwitcher {
+        margin-left: 15px;
+        select {
+            font-size: 12px;
+            
+        }
+    }
+}
+
+@media (max-width: 355px) {
+    .mobileMenu {
+        .mobileText {
+            margin-left: 1rem;
+        }
+        
+        .mobileToggleTheme{
+            margin-left: 1rem;
+        }
+    }
+    .languageSwitcher {
+        margin-left: 5px;
     }
 }

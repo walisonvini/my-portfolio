@@ -19,7 +19,7 @@
         pointer-events: none;
         user-select: none;
 
-        box-shadow: var(--background-secondary) 0px 5px 0px;
+        box-shadow: var(--border) 0px 5px 0px;
     }
 
     .terminal {
@@ -44,6 +44,18 @@
             font-size: 16px;
             border: none;
             outline: none;
+            text-decoration: none;
+            cursor: default;
+        }
+    }
+}
+
+[data-theme='hacker'] {
+    .terminal {
+        color: #00ff00;
+
+        input[type="text"] {
+            color: #00ff00;
         }
     }
 }

@@ -48,7 +48,7 @@ export function Presentation() {
                     <a className={styles.icons} href="https://www.linkedin.com/in/walison-vinicios-alves-ribeiro-259705198/" target="_blank" rel="noopener noreferrer"><AiFillLinkedin /></a>
                     <a className={`${styles.icons} ${styles.copyEmail}`} onClick={copyEmail} title="walison.vinicios12@gmail.com">
                         <MdEmail />
-                        <sup>Copiado</sup>
+                        <sup>{t("common.copied")}</sup>
                     </a>
                 </div>
                 <div>

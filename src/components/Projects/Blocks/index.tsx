@@ -38,7 +38,7 @@ export function Blocks({ title, image, description, icons, linkGitHub }: BlocksP
                             marginBottom: "1rem",
                             marginTop: "1rem",
                             padding: "15px 30px",
-                            color: "white"
+                            color: "black"
                         }}
                     />
                 </a>
@@ -48,7 +48,7 @@ export function Blocks({ title, image, description, icons, linkGitHub }: BlocksP
                         style={{
                             marginRight: "0.2rem",
                             padding: "15px 30px",
-                            color: "white"
+                            color: "black"
                         }}
                     />
                 </a>
