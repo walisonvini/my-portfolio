@@ -11,14 +11,24 @@
         "resume": "Download Currículo"
     },
     "about": {
-        "welcomeMessage": "Olá, meu nome é Walison Ribeiro, um desenvolvedor full stack autodidata e apaixonado por tecnologia, principalmente na área da programação. ",
-        "education": "Formado como Técnico em Desenvolvimento de Sistemas e atualmente cursando o {{semester}} semestre em Ciência da Computação 👨‍💻. ",
-        "projects": "Desde 2018 estudando e criando projetos web, software, mobile e hardware com arduino. O que mais prezo em meus códigos é a organização e testes. ",
-        "community": "Amo a comunidade dev e como todos podem contribuir com o desenvolvimento de nossas aplicações. Então vamos contribuir reciprocamente, conecte comigo no ",
+        "welcomeMessage": "Olá, meu nome é Walison Ribeiro, sou um desenvolvedor full stack autodidata e apaixonado por tecnologia, especialmente na área de programação. ",
+        "education": "Tenho formação como Técnico em Desenvolvimento de Sistemas e atualmente estou cursando o quarto semestre em Ciência da Computação 👨‍💻. ",
+        "projects": "Desde 2018, tenho estudado e desenvolvido projetos nas áreas de web, software, mobile e hardware com Arduino. Em meus códigos, dou grande importância à organização e realização de testes. ",
+        "community": "Sou apaixonado pela comunidade de desenvolvedores e acredito que todos podem contribuir para o avanço de nossas aplicações. Vamos contribuir reciprocamente! Conecte-se comigo no ",
         "MartinFowler": "Qualquer tolo consegue escrever código que um computador entenda. Bons programadores escrevem código que humanos possam entender"
     },
     "terminal": {
         "typeHelp": "Digite 'help' para obter a lista de comandos",
         "UnrecognizedCommand": "não é reconhecido como um comando interno ou externo, programa operável ou arquivo em lote."
-    }
+    },
+    "semesters": [
+        "primeiro",
+        "segundo",
+        "terceiro",
+        "quarto",
+        "quinto",
+        "sexto",
+        "sétimo",
+        "oitavo"
+    ]
 }

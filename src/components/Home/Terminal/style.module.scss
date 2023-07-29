@@ -1,30 +1,9 @@
 .container {
-    position: relative;
-    width: 100%;
-
-    .computer {
-        position: absolute;
-        width: 92.5%;
-        height: 64%;
-    
-        top: 0;
-        left: -2;
-        margin-top: 1.2rem;
-        margin-left: 1.2rem;
-    }
-    img {
-        max-width: 100%;
-        width: 500px;
-
-        pointer-events: none;
-        user-select: none;
-
-        box-shadow: var(--border) 0px 5px 0px;
-    }
-
     .terminal {
-        min-height: 260px;
-        max-height: 260px;
+        min-height: 350px;
+        max-height: 350px;
+        width: 35vw;
+
         overflow: auto;
 
         font-family: Inconsolata;
@@ -32,11 +11,16 @@
         background-color: #0c0c0c;
         
         list-style-type: none;
+
+        border-radius: 14px;
         
         .content {
-            margin-left: 5px;
+            margin-left: 8px;
+            margin-top: 8px;
+            margin-bottom: 8px;
+            text-align: left;
         }
-
+       
         input[type="text"] {
             color: #cccccc;
             background-color: #0c0c0c;
@@ -46,6 +30,45 @@
             outline: none;
             text-decoration: none;
             cursor: default;
+        }
+
+       
+    }
+    .header {
+        position: relative;
+        height: 30px;
+        width: 100%;
+        background: lightgray;
+        border-top-left-radius: 14px;
+        border-top-right-radius: 14px;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+
+        span {
+            position: absolute;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            box-shadow: 1px 2px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        span:nth-child(1) {
+            background-color: red;
+            top: 5px;
+            left: 10px;
+        }
+
+        span:nth-child(2) {
+            background-color: orange;
+            top: 5px;
+            left: 48px;
+        }
+
+        span:nth-child(3) {
+            background-color: rgb(21, 206, 67);
+            top: 5px;
+            left: 87px;
         }
     }
 }
@@ -84,18 +107,10 @@
     margin-bottom: 15px;
 }
 
-
-@media (max-width: 1060px) {
+@media (max-width: 930px) {
     .container {
-        .computer {
-            .terminal {
-                margin-top: 1.8vh;
-                margin-left: 1.4vw;
-            }
-            
-        }
-        img {
-            width: 400px;
+        .terminal {
+            width: 80vw;
         }
     }
 }

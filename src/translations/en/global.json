@@ -20,5 +20,15 @@
     "terminal": {
         "typeHelp": "Type 'help' to get the list of commands.",
         "UnrecognizedCommand": "is not recognized as an internal or external command, operable program or batch file."
-    }
+    },
+    "semesters": [
+        "first",
+        "second",
+        "third",
+        "fourth",
+        "fifth",
+        "sixth",
+        "seventh",
+        "eighth"
+    ]
 }

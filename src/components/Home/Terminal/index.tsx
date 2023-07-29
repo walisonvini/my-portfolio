@@ -92,26 +92,29 @@ export function Terminal() {
 
     return (
         <div className={styles.container}>
-            <img src="computer.png" alt="" ></img>
-            <div className={styles.computer}>
-                <div onClick={handleClick} className={styles.terminal} ref={terminalRef}>
-                    <div className={styles.content}>
-                        {commandInput.map((item, index) => {
-                            return (
-                                <li key={index} className={item.error ? styles.errorItem : ""}>
-                                    {item.error ? <span>{item.text}</span> : <span>C:\walison\portfolio&gt;{item.text}</span>}
-                                </li>
-                            )
-                        })}
-                        C:\walison\portfolio&gt;
-                        <input
-                            type="text"
-                            value={inputValue}
-                            ref={inputRef}
-                            onKeyDown={handleKeyPress}
-                            onChange={handleInputChange}
-                        />
-                    </div>
+            <div className={styles.header}>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div onClick={handleClick} className={styles.terminal} ref={terminalRef}>
+                
+                <div className={styles.content}>
+                    {commandInput.map((item, index) => {
+                        return (
+                            <li key={index} className={item.error ? styles.errorItem : ""}>
+                                {item.error ? <span>{item.text}</span> : <span>C:\walison\portfolio&gt;{item.text}</span>}
+                            </li>
+                        )
+                    })}
+                    C:\walison\portfolio&gt;
+                    <input
+                        type="text"
+                        value={inputValue}
+                        ref={inputRef}
+                        onKeyDown={handleKeyPress}
+                        onChange={handleInputChange}
+                    />
                 </div>
             </div>
         </div>

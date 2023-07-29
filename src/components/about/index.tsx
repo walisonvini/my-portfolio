@@ -8,8 +8,8 @@ export function About(){
     const { theme } = useContext(ThemeContext);
     const [t, i18n] = useTranslation("global");
 
-    const semesters = ['primeiro', 'segundo', 'terceiro', 'quarto', 'quinto', 'sexto', 'sétimo', 'oitavo'];
-    var semester;
+    const semesters = [t("semesters.0"), t("semesters.1"), t("semesters.2"), t("semesters.3"), t("semesters.4"), t("semesters.5"), t("semesters.6"), t("semesters.7")];
+    let semester: string;
     const date = new Date();
     
     if(date.getFullYear() == 2022) {
