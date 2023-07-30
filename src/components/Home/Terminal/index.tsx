@@ -9,8 +9,8 @@ export function Terminal() {
     const { theme, toggleTheme } = useContext(ThemeContext);
 
     const [commandInput, setCommandInput] = useState([{text: t("terminal.typeHelp"), error: true}]);
-    const [commandHistory, seCommandHistory] = useState([]);
     const [inputValue, setInputValue] = useState('');
+    const [commandHistory, setCommandHistory] = useState([]);
     const [lastHistoryPosition, setLastHistoryPosition] = useState(commandHistory.length);
     const [historyIndex, setHistoryIndex] = useState(lastHistoryPosition);
     const inputRef = useRef(null);
@@ -43,7 +43,7 @@ export function Terminal() {
     const handleKeyPress = (event) => {
         if (event.key === 'Enter') {
             setCommandInput((prevCommands) => [...prevCommands, {text: inputValue, error: false}]);
-            seCommandHistory([...commandHistory, inputValue]);
+            setCommandHistory([...commandHistory, inputValue]);
             setHistoryIndex(lastHistoryPosition)
 
             switch (inputValue) {
@@ -74,6 +74,7 @@ export function Terminal() {
             setInputValue('');
 
         } else if(event.key === 'ArrowUp') {
+            event.preventDefault();
             if(historyIndex >= 0) {
                 setInputValue(commandHistory[historyIndex])
 
@@ -81,6 +82,7 @@ export function Terminal() {
                     setHistoryIndex(historyIndex - 1)
             }
         } else if(event.key === 'ArrowDown') {
+            event.preventDefault();
             if(historyIndex < lastHistoryPosition ) {
                 if(historyIndex < lastHistoryPosition - 1)
                     setHistoryIndex(historyIndex + 1)
@@ -103,11 +105,19 @@ export function Terminal() {
                     {commandInput.map((item, index) => {
                         return (
                             <li key={index} className={item.error ? styles.errorItem : ""}>
-                                {item.error ? <span>{item.text}</span> : <span>C:\walison\portfolio&gt;{item.text}</span>}
+                                {
+                                    item.error ? 
+                                    <span>{item.text}</span> : 
+                                    <span>
+                                        <span className={styles.commandInput}>C:\walison\portfolio&gt;{item.text}</span>
+                                        <span className={styles.commandInputMobile}>C:\&gt;{item.text}</span>
+                                    </span>
+                                }
                             </li>
                         )
                     })}
-                    C:\walison\portfolio&gt;
+                    <span className={styles.commandInput}>C:\walison\portfolio&gt;</span>
+                    <span className={styles.commandInputMobile}>C:\&gt;</span>
                     <input
                         type="text"
                         value={inputValue}

@@ -1,85 +1,88 @@
 .container {
     .terminal {
-        min-height: 350px;
-        max-height: 350px;
-        width: 35vw;
+      min-height: 350px;
+      max-height: 350px;
+      min-width: 35vw;
+      max-width: 35vw;
+    
+      @media (max-height: 800px) {
+        min-height: 250px;
+        max-height: 250px;
+        min-width: 40vw;
+        max-width: 40vw;
+      }
 
-        overflow: auto;
-
-        font-family: Inconsolata;
+      @media (max-width: 930px) {
+        min-width: 80vw;
+        max-width: 80vw;
+      }
+  
+      overflow: auto;
+  
+      font-family: Inconsolata;
+      color: #cccccc;
+      background-color: #0c0c0c;
+  
+      list-style-type: none;
+  
+      border-bottom-left-radius: 14px;
+      border-bottom-right-radius: 14px;
+  
+      .content {
+        margin-left: 8px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+        text-align: left;
+      }
+  
+      input[type="text"] {
+        width: 50%;
         color: #cccccc;
         background-color: #0c0c0c;
-        
-        list-style-type: none;
-
-        border-radius: 14px;
-        
-        .content {
-            margin-left: 8px;
-            margin-top: 8px;
-            margin-bottom: 8px;
-            text-align: left;
-        }
-       
-        input[type="text"] {
-            color: #cccccc;
-            background-color: #0c0c0c;
-            font-family: Inconsolata;
-            font-size: 16px;
-            border: none;
-            outline: none;
-            text-decoration: none;
-            cursor: default;
-        }
-
-       
+        font-family: Inconsolata;
+        font-size: 16px;
+        border: none;
+        outline: none;
+        text-decoration: none;
+        cursor: default;
+      }
     }
     .header {
-        position: relative;
-        height: 30px;
-        width: 100%;
-        background: lightgray;
-        border-top-left-radius: 14px;
-        border-top-right-radius: 14px;
-        top: 0px;
-        left: 0px;
-        right: 0px;
-
-        span {
-            position: absolute;
-            height: 20px;
-            width: 20px;
-            border-radius: 50%;
-            box-shadow: 1px 2px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        span:nth-child(1) {
-            background-color: red;
-            top: 5px;
-            left: 10px;
-        }
-
-        span:nth-child(2) {
-            background-color: orange;
-            top: 5px;
-            left: 48px;
-        }
-
-        span:nth-child(3) {
-            background-color: rgb(21, 206, 67);
-            top: 5px;
-            left: 87px;
-        }
-    }
-}
-
-[data-theme='hacker'] {
-    .terminal {
-        color: #00ff00;
-
-        input[type="text"] {
-            color: #00ff00;
-        }
+      position: relative;
+      height: 30px;
+      width: 100%;
+      background: lightgray;
+      border-top-left-radius: 14px;
+      border-top-right-radius: 14px;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+  
+      span {
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        box-shadow: 1px 2px 20px rgba(0, 0, 0, 0.3);
+      }
+  
+      span:nth-child(1) {
+        background-color: red;
+        top: 5px;
+        left: 10px;
+      }
+  
+      span:nth-child(2) {
+        background-color: orange;
+        top: 5px;
+        left: 48px;
+      }
+  
+      span:nth-child(3) {
+        background-color: rgb(21, 206, 67);
+        top: 5px;
+        left: 87px;
+      }
     }
 }
 
@@ -107,10 +110,25 @@
     margin-bottom: 15px;
 }
 
-@media (max-width: 930px) {
-    .container {
-        .terminal {
-            width: 80vw;
-        }
-    }
+[data-theme='hacker'] {
+  .terminal {
+      color: #00ff00;
+
+      input[type="text"] {
+          color: #00ff00;
+      }
+  }
+}
+
+.commandInputMobile {
+  display: none;
+}
+
+@media (max-width: 610px) {
+  .commandInput{
+    display: none;
+  }
+  .commandInputMobile {
+    display: inline;
+  }
 }
