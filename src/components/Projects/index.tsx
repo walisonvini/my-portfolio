@@ -24,12 +24,12 @@ export function Projects() {
                     online seu game favorito, conectado a Twitch."
                     image="nlw-esports.png"
                     icons={[
-                        <SiIcon.SiTypescript />,
-                        <SiIcon.SiReact />,
-                        <SiIcon.SiSqlite />,
-                        <SiIcon.SiPrisma />,
-                        <SiIcon.SiTailwindcss />,
-                        <FaIcon.FaNodeJs />
+                        <SiIcon.SiTypescript key="typescript" />,
+                        <SiIcon.SiReact key="react" />,
+                        <SiIcon.SiSqlite key="sqlite" />,
+                        <SiIcon.SiPrisma key="prisma" />,
+                        <SiIcon.SiTailwindcss key="tailwindcss" />,
+                        <FaIcon.FaNodeJs key="nodejs" />
                     ]}
                     linkGitHub="https://github.com/walisonvini"
                 />
@@ -38,9 +38,9 @@ export function Projects() {
                     description="Esse é o site em que você está navegando, meu site pessoal :) "
                     image="portfolio.png"
                     icons={[
-                        <SiIcon.SiTypescript />,
-                        <TbIcon.TbBrandNextjs />,
-                        <FaIcon.FaSass />,
+                        <SiIcon.SiTypescript key="typescript" />,
+                        <TbIcon.TbBrandNextjs key="nextjs" />,
+                        <FaIcon.FaSass key="sass" />,
                     ]}
                     linkGitHub="https://github.com/walisonvini/my-portfolio"
                 />
@@ -50,12 +50,12 @@ export function Projects() {
                     de acordo com a teoria da curva de esquecimento de Ebbinghaus."
                     image="revision.png"
                     icons={[
-                        <SiIcon.SiTypescript />,
-                        <TbIcon.TbBrandNextjs />,
-                        <FaIcon.FaSass />,
-                        <SiIcon.SiPython />,
-                        <SiIcon.SiDjango />,
-                        <SiIcon.SiPostgresql />,
+                        <SiIcon.SiTypescript key="typescript" />,
+                        <TbIcon.TbBrandNextjs key="nextjs" />,
+                        <FaIcon.FaSass key="sass" />,
+                        <SiIcon.SiPython key="python" />,
+                        <SiIcon.SiDjango key="django" />,
+                        <SiIcon.SiPostgresql key="postgresql" />,
                     ]}
                     linkGitHub="https://github.com/walisonvini/revision"
                 />

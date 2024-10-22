@@ -1,5 +1,5 @@
 import { Footer } from "../Footer"
-import { Navbar } from "../Navbar"
+import { Navbar } from "../navbar"
 import styles from "./style.module.scss"
 
 export function Container({ children }) {

@@ -56,7 +56,7 @@ export function About(){
                 
             </div>
             <h4>
-                "{t("about.MartinFowler")}"
+                {t("about.MartinFowler").replace(/"/g, "&quot;")}
                 <p>Martin Fowler</p>
             </h4>
         </section>

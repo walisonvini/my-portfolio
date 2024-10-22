@@ -1,6 +1,6 @@
 import { I18nextProvider } from "react-i18next"
-import { About } from "../components/About"
-import { Container } from "../components/Container"
+import { About } from "../components/about"
+import { Container } from "../components/container"
 import { Presentation } from "../components/Home"
 import { Projects } from "../components/Projects"
 import { Skills } from "../components/Skills"
