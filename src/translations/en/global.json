@@ -8,7 +8,8 @@
     "home": {
         "hiIam": "Hi, I am",
         "stack": "A full stack developer",
-        "resume": "Download Resume"
+        "resume": "Download Resume",
+        "resumepdf": "Walison Resume.pdf"
     },
     "about": {
         "welcomeMessage": "Hello, my name is Walison Ribeiro, a self-taught full stack developer passionate about technology, especially in the field of programming. ",
@@ -19,7 +20,13 @@
     },
     "terminal": {
         "typeHelp": "Type 'help' to get the list of commands.",
-        "UnrecognizedCommand": "is not recognized as an internal or external command, operable program or batch file."
+        "UnrecognizedCommand": "is not recognized as an internal or external command, operable program or batch file.",
+        "help": {
+            "title": "Available commands:",
+            "clear": "clear - Clears the terminal screen",
+            "theme": "theme [dark/light/hacker/ocean/cosmic] - Changes the website theme",
+            "help": "help - Shows this help message"
+        }
     },
     "semesters": [
         "first",
@@ -30,5 +37,13 @@
         "sixth",
         "seventh",
         "eighth"
-    ]
+    ],
+    "projects": {
+        "cryptkeeper": {
+            "description": "CryptKeeper is a web application focused on secure password and sensitive information management. The goal of the system is to allow users to store their credentials in a practical, organized, and protected online environment."
+        },
+        "portfolio": {
+            "description": "This is the site you are browsing, my personal site :) "
+        }
+    }
 }

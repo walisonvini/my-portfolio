@@ -31,7 +31,7 @@ export function Presentation() {
                     <RewrittenText />
                     <noscript><h1>Walison Ribeiro</h1></noscript>
                     <p>{t("home.stack")}</p>
-                    <a href="Walison Resume.pdf" download="Walison Resume.pdf">
+                    <a href={t("home.resumepdf")} download={t("home.resumepdf")}>
                         <Button
                             text={t("home.resume")}
                             style={{

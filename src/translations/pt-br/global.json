@@ -8,7 +8,8 @@
     "home": {
         "hiIam": "Olá, eu sou",
         "stack": "Desenvolvedor full-stack",
-        "resume": "Download Currículo"
+        "resume": "Download Currículo",
+        "resumepdf": "Currículo Walison Ribeiro.pdf"
     },
     "about": {
         "welcomeMessage": "Olá, meu nome é Walison Ribeiro, sou um desenvolvedor full stack autodidata e apaixonado por tecnologia, especialmente na área de programação. ",
@@ -19,7 +20,13 @@
     },
     "terminal": {
         "typeHelp": "Digite 'help' para obter a lista de comandos",
-        "UnrecognizedCommand": "não é reconhecido como um comando interno ou externo, programa operável ou arquivo em lote."
+        "UnrecognizedCommand": "não é reconhecido como um comando interno ou externo, programa operável ou arquivo em lote.",
+        "help": {
+            "title": "Comandos disponíveis:",
+            "clear": "clear - Limpa a tela do terminal",
+            "theme": "theme [dark/light/hacker/ocean/cosmic] - Altera o tema do site",
+            "help": "help - Mostra esta mensagem de ajuda"
+        }
     },
     "semesters": [
         "primeiro",
@@ -30,5 +37,13 @@
         "sexto",
         "sétimo",
         "oitavo"
-    ]
+    ],
+    "projects": {
+        "cryptkeeper": {
+            "description": "CryptKeeper é uma aplicação web voltada para o gerenciamento seguro de senhas e informações sensíveis. O objetivo do sistema é permitir que usuários possam armazenar suas credenciais de forma prática, organizada e protegida em um ambiente online."
+        },
+        "portfolio": {
+            "description": "Esse é o site em que você está navegando, meu site pessoal :) "
+        }
+    }
 }

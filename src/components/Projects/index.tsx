@@ -19,23 +19,8 @@ export function Projects() {
             
             <div className={styles.projects}>
                 <Blocks
-                    title="Find your Duo"
-                    description="Find your Duo, uma plataforma que ajuda gamers a encontrar um parceiro ou parceira para jogar 
-                    online seu game favorito, conectado a Twitch."
-                    image="nlw-esports.png"
-                    icons={[
-                        <SiIcon.SiTypescript key="typescript" />,
-                        <SiIcon.SiReact key="react" />,
-                        <SiIcon.SiSqlite key="sqlite" />,
-                        <SiIcon.SiPrisma key="prisma" />,
-                        <SiIcon.SiTailwindcss key="tailwindcss" />,
-                        <FaIcon.FaNodeJs key="nodejs" />
-                    ]}
-                    linkGitHub="https://github.com/walisonvini"
-                />
-                <Blocks
                     title="My Portfolio"
-                    description="Esse é o site em que você está navegando, meu site pessoal :) "
+                    description={t("projects.portfolio.description")}
                     image="portfolio.png"
                     icons={[
                         <SiIcon.SiTypescript key="typescript" />,
@@ -43,21 +28,22 @@ export function Projects() {
                         <FaIcon.FaSass key="sass" />,
                     ]}
                     linkGitHub="https://github.com/walisonvini/my-portfolio"
+                    linkPreview="https://walisonribeiro.com/"
                 />
                 <Blocks
-                    title="Revision"
-                    description="Revision, uma plataforma que te ajuda a revisar suas matérias 
-                    de acordo com a teoria da curva de esquecimento de Ebbinghaus."
-                    image="revision.png"
+                    title="Cryptkeeper"
+                    description={t("projects.cryptkeeper.description")}
+                    image="cryptkeeper.png"
                     icons={[
-                        <SiIcon.SiTypescript key="typescript" />,
-                        <TbIcon.TbBrandNextjs key="nextjs" />,
-                        <FaIcon.FaSass key="sass" />,
                         <SiIcon.SiPython key="python" />,
                         <SiIcon.SiDjango key="django" />,
                         <SiIcon.SiPostgresql key="postgresql" />,
+                        <SiIcon.SiJavascript key="javascript" />,
+                        <SiIcon.SiHtml5 key="html" />,
+                        <SiIcon.SiCss3 key="css" />,
                     ]}
-                    linkGitHub="https://github.com/walisonvini/revision"
+                    linkGitHub="https://github.com/walisonvini/crypt-keeper"
+                    linkPreview="https://cryptkeeper.walisonribeiro.com/"
                 />
             </div>
         </section>

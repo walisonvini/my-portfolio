@@ -4,11 +4,17 @@ import styles from "./style.module.scss"
 
 import { ThemeContext } from "../../../contexts/ToggleTheme";
 
+interface CommandInput {
+    text: string;
+    error: boolean;
+    noPrefix?: boolean;
+}
+
 export function Terminal() {
     const [t, i18n] = useTranslation("global");
     const { theme, toggleTheme } = useContext(ThemeContext);
 
-    const [commandInput, setCommandInput] = useState([{text: t("terminal.typeHelp"), error: true}]);
+    const [commandInput, setCommandInput] = useState<CommandInput[]>([{text: t("terminal.typeHelp"), error: true}]);
     const [inputValue, setInputValue] = useState('');
     const [commandHistory, setCommandHistory] = useState([]);
     const [lastHistoryPosition, setLastHistoryPosition] = useState(commandHistory.length);
@@ -49,6 +55,15 @@ export function Terminal() {
             switch (inputValue) {
                 case 'clear':
                     setCommandInput([])
+                    break;
+                case 'help':
+                    setCommandInput((prevCommands) => [
+                        ...prevCommands,
+                        { text: t("terminal.help.title"), error: false, noPrefix: true },
+                        { text: t("terminal.help.clear"), error: false, noPrefix: true },
+                        { text: t("terminal.help.theme"), error: false, noPrefix: true },
+                        { text: t("terminal.help.help"), error: false, noPrefix: true }
+                    ]);
                     break;
                 case 'theme dark':
                     toggleTheme('dark')
@@ -109,8 +124,14 @@ export function Terminal() {
                                     item.error ? 
                                     <span>{item.text}</span> : 
                                     <span>
-                                        <span className={styles.commandInput}>C:\walison\portfolio&gt;{item.text}</span>
-                                        <span className={styles.commandInputMobile}>C:\&gt;{item.text}</span>
+                                        {item.noPrefix ? (
+                                            <span>{item.text}</span>
+                                        ) : (
+                                            <>
+                                                <span className={styles.commandInput}>C:\walison\portfolio&gt;{item.text}</span>
+                                                <span className={styles.commandInputMobile}>C:\&gt;{item.text}</span>
+                                            </>
+                                        )}
                                     </span>
                                 }
                             </li>

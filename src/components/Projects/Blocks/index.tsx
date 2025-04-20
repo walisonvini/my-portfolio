@@ -10,10 +10,11 @@ type BlocksProps = {
     image: string;
     description: string;
     icons: any[],
-    linkGitHub: string
+    linkGitHub: string,
+    linkPreview: string
 }
 
-export function Blocks({ title, image, description, icons, linkGitHub }: BlocksProps) {
+export function Blocks({ title, image, description, icons, linkGitHub, linkPreview }: BlocksProps) {
     const { theme } = useContext(ThemeContext);
 
     return (
@@ -42,7 +43,7 @@ export function Blocks({ title, image, description, icons, linkGitHub }: BlocksP
                         }}
                     />
                 </a>
-                <a href="" target="_blank" rel="noopener noreferrer">
+                <a href={linkPreview} target="_blank" rel="noopener noreferrer">
                     <Button
                         text="Preview"
                         style={{
