@@ -13,7 +13,7 @@
     },
     "about": {
         "welcomeMessage": "Olá, meu nome é Walison Ribeiro, sou um desenvolvedor full stack autodidata e apaixonado por tecnologia, especialmente na área de programação. ",
-        "education": "Tenho formação como Técnico em Desenvolvimento de Sistemas e atualmente estou cursando o quarto semestre em Ciência da Computação 👨‍💻. ",
+        "education": "Tenho formação como Técnico em Desenvolvimento de Sistemas e atualmente estou cursando o {{semester}} semestre em Ciência da Computação 👨‍💻. ",
         "projects": "Desde 2018, tenho estudado e desenvolvido projetos nas áreas de web, software, mobile e hardware com Arduino. Em meus códigos, dou grande importância à organização e realização de testes. ",
         "community": "Sou apaixonado pela comunidade de desenvolvedores e acredito que todos podem contribuir para o avanço de nossas aplicações. Vamos contribuir reciprocamente! Conecte-se comigo no ",
         "MartinFowler": "Qualquer tolo consegue escrever código que um computador entenda. Bons programadores escrevem código que humanos possam entender"
