@@ -43,7 +43,10 @@
             "description": "CryptKeeper is a web application focused on secure password and sensitive information management. The goal of the system is to allow users to store their credentials in a practical, organized, and protected online environment."
         },
         "portfolio": {
-            "description": "This is the site you are browsing, my personal site :) "
+            "description": "This is the site you are browsing, my personal site :)"
+        },
+        "dashboard": {
+            "description": "The Dashboard is a corporate intranet project designed to centralize the management of internal company information and processes. It features user authentication, role-based permissions, ticket management, and metrics, all in a single interface to streamline administration."
         }
     }
 }

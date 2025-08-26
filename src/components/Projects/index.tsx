@@ -8,6 +8,7 @@ import { Blocks } from './Blocks';
 import * as SiIcon from 'react-icons/si';
 import * as FaIcon from 'react-icons/fa';
 import * as TbIcon from 'react-icons/tb';
+import * as GrIcon from 'react-icons/gr';
 
 export function Projects() {
     const { theme } = useContext(ThemeContext);
@@ -31,10 +32,27 @@ export function Projects() {
                     linkPreview="https://walisonribeiro.com/"
                 />
                 <Blocks
+                    title="Dashboard"
+                    description={t("projects.dashboard.description")}
+                    image="dashboard.png"
+                    icons={[
+                        <FaIcon.FaDocker key="docker" />,
+                        <FaIcon.FaPhp key="php" />,
+                        <FaIcon.FaLaravel key="laravel" />,
+                        <SiIcon.SiJavascript key="javascript" />,
+                        <FaIcon.FaVuejs key="vue" />,
+                        <GrIcon.GrMysql key="mysql" />,
+
+                    ]}
+                    linkGitHub="https://github.com/walisonvini/dashboard"
+                    linkPreview="https://dashboard.walisonribeiro.com/"
+                />
+                <Blocks
                     title="Cryptkeeper"
                     description={t("projects.cryptkeeper.description")}
                     image="cryptkeeper.png"
                     icons={[
+                        <FaIcon.FaDocker key="docker" />,
                         <SiIcon.SiPython key="python" />,
                         <SiIcon.SiDjango key="django" />,
                         <SiIcon.SiPostgresql key="postgresql" />,

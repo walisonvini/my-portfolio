@@ -44,6 +44,9 @@
         },
         "portfolio": {
             "description": "Esse é o site em que você está navegando, meu site pessoal :) "
+        },
+        "dashboard": {
+            "description": "O Dashboard é um projeto de intranet corporativa que serve como base para gerenciar informações e processos internos de uma empresa. Ele oferece autenticação de usuários, controle de permissões e funções, gestão de tickets, além de métricas e relatórios, tudo reunido em uma interface centralizada para facilitar a administração."
         }
     }
 }
