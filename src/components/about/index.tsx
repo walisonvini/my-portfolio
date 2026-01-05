@@ -8,35 +8,6 @@ export function About(){
     const { theme } = useContext(ThemeContext);
     const [t, i18n] = useTranslation("global");
 
-    const semesters = [t("semesters.0"), t("semesters.1"), t("semesters.2"), t("semesters.3"), t("semesters.4"), t("semesters.5"), t("semesters.6"), t("semesters.7")];
-    let semester: string;
-    const date = new Date();
-    
-    if(date.getFullYear() == 2022) {
-        if(date.getMonth()+1 <= 6)
-            semester = semesters[0]
-        else
-            semester = semesters[1]
-    }
-    else if(date.getFullYear() == 2023) {
-        if(date.getMonth()+1 <= 6)
-            semester = semesters[2]
-        else
-            semester = semesters[3]
-    }
-    else if(date.getFullYear() == 2024) {
-        if(date.getMonth()+1 <= 6)
-            semester = semesters[4]
-        else
-            semester = semesters[5]
-    }
-    else if(date.getFullYear() == 2025) {
-        if(date.getMonth()+1 <= 6)
-            semester = semesters[6]
-        else
-            semester = semesters[7]
-    }
-
     return(
         <section id="about" className={styles.container} data-theme={theme}>
             <div className={styles.title}>{t("common.aboutMe")}</div>
@@ -46,7 +17,7 @@ export function About(){
                 <p>
                     {t("about.welcomeMessage")}
 
-                    {t("about.education", { semester: semester })}
+                    {t("about.education")}
                     <br />
                     <br />
                     {t("about.projects")}

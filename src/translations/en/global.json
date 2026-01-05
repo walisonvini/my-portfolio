@@ -13,7 +13,7 @@
     },
     "about": {
         "welcomeMessage": "Hello, my name is Walison Ribeiro, a self-taught full stack developer passionate about technology, especially in the field of programming. ",
-        "education": "I graduated as a Systems Development Technician and I am currently in the {{semester}} semester of Computer Science 👨‍💻. ",
+        "education": "I hold a technical degree in Systems Development and a Bachelor’s degree in Computer Science 👨‍💻. ",
         "projects": "Since 2018, I have been studying and creating web, software, mobile, and hardware projects with Arduino. What I value the most in my code is organization and testing. ",
         "community": "I love the developer community and how everyone can contribute to the development of our applications. So let's contribute reciprocally, connect with me on ",
         "MartinFowler": "Any fool can write code that a computer can understand. Good programmers write code that humans can understand"
@@ -28,16 +28,6 @@
             "help": "help - Shows this help message"
         }
     },
-    "semesters": [
-        "first",
-        "second",
-        "third",
-        "fourth",
-        "fifth",
-        "sixth",
-        "seventh",
-        "eighth"
-    ],
     "projects": {
         "cryptkeeper": {
             "description": "CryptKeeper is a web application focused on secure password and sensitive information management. The goal of the system is to allow users to store their credentials in a practical, organized, and protected online environment."

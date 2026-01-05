@@ -13,7 +13,7 @@
     },
     "about": {
         "welcomeMessage": "Olá, meu nome é Walison Ribeiro, sou um desenvolvedor full stack autodidata e apaixonado por tecnologia, especialmente na área de programação. ",
-        "education": "Tenho formação como Técnico em Desenvolvimento de Sistemas e atualmente estou cursando o {{semester}} semestre em Ciência da Computação 👨‍💻. ",
+        "education": "Tenho formação técnica em Desenvolvimento de Sistemas e bacharelado em Ciência da Computação 👨‍💻. ",
         "projects": "Desde 2018, tenho estudado e desenvolvido projetos nas áreas de web, software, mobile e hardware com Arduino. Em meus códigos, dou grande importância à organização e realização de testes. ",
         "community": "Sou apaixonado pela comunidade de desenvolvedores e acredito que todos podem contribuir para o avanço de nossas aplicações. Vamos contribuir reciprocamente! Conecte-se comigo no ",
         "MartinFowler": "Qualquer tolo consegue escrever código que um computador entenda. Bons programadores escrevem código que humanos possam entender"
@@ -28,16 +28,6 @@
             "help": "help - Mostra esta mensagem de ajuda"
         }
     },
-    "semesters": [
-        "primeiro",
-        "segundo",
-        "terceiro",
-        "quarto",
-        "quinto",
-        "sexto",
-        "sétimo",
-        "oitavo"
-    ],
     "projects": {
         "cryptkeeper": {
             "description": "CryptKeeper é uma aplicação web voltada para o gerenciamento seguro de senhas e informações sensíveis. O objetivo do sistema é permitir que usuários possam armazenar suas credenciais de forma prática, organizada e protegida em um ambiente online."
